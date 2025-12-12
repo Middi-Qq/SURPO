@@ -8,12 +8,13 @@ public static class Program
         Console.WriteLine(person.Name + "," + person.Age);
     }
 
-    private class Person(string name, int age)
+    private class Person(string name, int age, bool gender)
     {
         public string Name { get; set; } = name;
         public int Age { get; set; } = age;
+        public bool Gender { get; set; } = gender; // 1 - Man, 0 - Woman
 
-        public Person() : this("John", 20)
+        public Person() : this("John", 20, true)
         {
         }
     }
